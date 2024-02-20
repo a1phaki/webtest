@@ -1,0 +1,109 @@
+
+.item{
+    position: relative;
+    &:hover{
+        .content{
+            opacity: 1;
+        }
+    }
+    .content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(180deg, rgba(#fff,0) 30%, rgba(#000,0.5) );
+        opacity: 0;
+        transition: opacity 0.6s;
+        cursor: pointer;
+    }    
+}
+
+.card{
+    cursor: pointer;
+    position: relative;
+    box-shadow: $box-shadow;
+    &:hover{
+        .card-hover{
+            opacity: 1;
+        }
+        .card-body{
+            .h5{
+                color: $cat;
+            }
+        }
+        box-shadow: $box-shadow-lg;
+    }
+    .card-hover{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        transition: opacity 0.6s;
+    }
+}
+.card.no-pointer{
+    cursor: default;
+}
+
+.sticker{
+    &:hover{
+        .img{
+            .img-hover{
+                opacity: 1;
+            }
+        }   
+    }
+    .img{
+        position: relative;
+        .img-hover{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            transition: opacity 0.6s;
+            }    
+        }
+}
+
+.a-hover-custom{
+    a{
+        display: block;
+    }
+    a:hover{
+        color: $cat;
+        transition: 0.6s;
+    }
+}
+
+@include media-breakpoint-up(md){
+    .a-hover-custom{
+        a{
+            position: relative;
+            display: inline-block;
+            &::after{
+                content:"" ;
+                position: absolute;
+                height: 2px;
+                width:11px;
+                opacity: 0;
+                background-color: #000;
+                left: 0;
+                top:40%;
+            }
+            &:hover{
+                &::after{
+                    opacity: 1;
+                    background-color: $cat;
+                }
+                padding-left: 18px;
+                color: $cat;
+                transition: 0.6s;
+            }
+        }
+    }
+}
