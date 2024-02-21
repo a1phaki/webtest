@@ -85,12 +85,31 @@ import { getFirestore, collection, addDoc, doc, setDoc, FieldValue, getDocs, get
         selectionQuerySnapshot.forEach((selectionDoc) => {
           console.log(`Selection ID: ${selectionDoc.id}`);
           console.log("Selection data:", selectionDoc.data());
-          selection += `<div class="col-6">${selectionDoc.data().description}</div>`
+          selection += `<div>${selectionDoc.data().description}</div>`
         });
         console.log(selection)
-        str += `<p>${docId}</p>
-                <div class="row">
-                  ${selection}
+        str += `<div class="my-4"> 
+                  <p>${docId}</p>
+                  <div class="row g-5 row-cols-2 mb-4">
+                    ${selection}
+                  </div>
+                  <div class="row row-cols-5 g-3">
+                    <div class="col">
+                      <div class="btn btn-outline-info btn-lg">2</div>
+                    </div>
+                    <div class="col">
+                      <div class="btn btn-outline-info btn-lg">1</div>
+                    </div>
+                    <div class="col">
+                      <div class="btn btn-outline-info btn-lg">0</div>
+                    </div>
+                    <div class="col">
+                      <div class="btn btn-outline-info btn-lg">1</div>
+                    </div>
+                    <div class="col">
+                      <div class="btn btn-outline-info btn-lg">2</div>
+                    </div>
+                  </div>
                 </div>`
       } else {
         console.log(`Document ${docId} does not exist.`);
