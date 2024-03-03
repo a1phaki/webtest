@@ -9,58 +9,24 @@
     <link rel="stylesheet" href="stylesheet/all.css">
 </head>
 <body>
-    <div class="container text-center overflow-hidden">
+    <div class="container text-center">
       <h1>MBTI測試</h1>
-      <section>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input IE" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="I">
-          <label class="form-check-label" for="inlineRadio1">I</label>
+        <form class="page1 container w-25" id="login">
+          <div class="input-group input-group-lg my-5">
+            <span class="input-group-text w-25" id="inputGroup-sizing-lg">Email</span>
+            <input type="email" class="form-control email" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"
+            placeholder="請輸入email">
+          </div>
+          <div class="input-group input-group-lg">
+            <span class="input-group-text w-25" id="inputGroup-sizing-lg">暱稱</span>
+            <input type="text" class="form-control nickname" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="請輸入暱稱">
+          </div>
+          <input type="submit" value="送出" class="btn btn-outline-info mt-5 btn-lg">
         </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input IE" type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="E">
-          <label class="form-check-label" for="inlineRadio2">E</label>
+        <div class="page2">
+          <div class="question text-center"></div>
+          <div class="pagination justify-content-center"></div>
         </div>
-      </section>
-      <section>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input NS" type="radio" name="inlineRadioOptions2" id="inlineRadio1" value="N">
-          <label class="form-check-label" for="inlineRadio1">N</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input NS" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="S">
-          <label class="form-check-label" for="inlineRadio2">S</label>
-        </div>
-      </section>
-
-      <section>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input FT" type="radio" name="inlineRadioOptions3" id="inlineRadio1" value="F">
-          <label class="form-check-label" for="inlineRadio1">F</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input FT" type="radio" name="inlineRadioOptions3" id="inlineRadio2" value="T">
-          <label class="form-check-label" for="inlineRadio2">T</label>
-        </div>
-      </section>
-
-      <section>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input JP" type="radio" name="inlineRadioOptions4" id="inlineRadio1" value="J">
-          <label class="form-check-label" for="inlineRadio1">J</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input JP" type="radio" name="inlineRadioOptions4" id="inlineRadio2" value="P">
-          <label class="form-check-label" for="inlineRadio2">P</label>
-        </div>
-      </section>
-      <button class="btn btn-primary">
-        送出 
-      </button>
-      <span class="result"></span>
-      <div class="question text-center">
-        
-      </div>
-      </div>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
